@@ -23,7 +23,16 @@ const comments = [{
     {
         'author': 'Person 5',
         'title': 'Some post 5',
-        'content': 'Something being said by p5'
+        'content': 'Something being said by p5',
+        'comments': [
+            {
+                '_id': 1,
+                'author': 'Person 4',
+                'title': 'Some reply post 5',
+                'content': 'Something being said by p4',
+                'comments':[]
+            }
+        ]
     },
 ];
 
