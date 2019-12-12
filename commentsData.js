@@ -1,23 +1,28 @@
 import commentModel from './api/comments/commentModel';
 
 const comments = [{
-        'name': 'Person 1',
+        'author': 'Person 1',
+        'title': 'Some post 1',
         'content': 'Something being said by p1'
     },
     {
-        'name': 'Person 2',
+        'author': 'Person 2',
+        'title': 'Some post 2',
         'content': 'Something being said by p2'
     },
     {
-        'name': 'Person 3',
+        'author': 'Person 3',
+        'title': 'Some post 3',
         'content': 'Something being said by p3'
     },
     {
-        'name': 'Person 4',
+        'author': 'Person 4',
+        'title': 'Some post 4',
         'content': 'Something being said by p4'
     },
     {
-        'name': 'Person 5',
+        'author': 'Person 5',
+        'title': 'Some post 5',
         'content': 'Something being said by p5'
     },
 ];

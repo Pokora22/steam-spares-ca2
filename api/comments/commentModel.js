@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const CommentSchema = new Schema({
-    name: String,
+    author: String,
+    title: String,
     content: String,
     comments: [],
     updated: {

@@ -4,7 +4,6 @@ import asyncHandler from 'express-async-handler';
 
 const router = express.Router(); // eslint-disable-line
 
-
 // Get all contacts, using try/catch to handle errors
 router.get('/', async (req, res) => {
   try {
