@@ -34,6 +34,7 @@ router.put('/:id', asyncHandler(async (req, res) => {
 
 // Delete a contact
 router.delete('/:id', asyncHandler(async (req, res) => {
+  console.log("HEEEEEEEEEEEEEEEEEEEEEEEEEERE! THE ID TO DELETE IS: " + req.params.id);
   const comment = await Comment.findById(req.params.id);
   if (!comment) return res.send(404);
   await comment.remove();
