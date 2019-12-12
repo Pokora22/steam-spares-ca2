@@ -29,6 +29,7 @@ const comments = [{
 
 export default async function loadContacts() {
     try {
+        console.info("Adding data")
         await commentModel.deleteMany();
         await commentModel.collection.insert(comments);
         console.info(`${comments.length} comments were successfully stored.`);
