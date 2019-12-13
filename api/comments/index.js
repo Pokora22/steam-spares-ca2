@@ -1,6 +1,7 @@
 import express from 'express';
 import Comment from './commentModel';
 import asyncHandler from 'express-async-handler';
+import mongoose from 'mongoose'
 
 const router = express.Router(); // eslint-disable-line
 
@@ -26,6 +27,25 @@ router.put('/:id', asyncHandler(async (req, res) => {
   const comment = await Comment.update({
     _id: req.params.id,
   }, req.body, {
+    upsert: false,
+  });
+  if (!comment) return res.sendStatus(404);
+  return res.json(200, comment);
+}));
+
+//Add reply
+router.put('/:id/r', asyncHandler(async (req, res) => {
+  if (req.body._id) delete req.body._id;
+  const comment = await Comment.update({
+    _id: req.params.id,
+  }, {$push: {
+      comments: {
+        _id: mongoose.Types.ObjectId(),
+        author: req.body.author,
+        content: req.body.content,
+        comments:[]
+      }
+    }}, {
     upsert: false,
   });
   if (!comment) return res.sendStatus(404);
