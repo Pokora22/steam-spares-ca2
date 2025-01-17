@@ -11,7 +11,7 @@
     "express-async-handler": "^1.1.4",
     "firebase": "^7.2.3",
     "lodash": "^4.17.15",
-    "mongoose": "^5.8.0",
+    "mongoose": "^8.9.5",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "^3.3.0",
